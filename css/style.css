@@ -1,19 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container-fluid {
     position: absolute;
-    background-image: url(../images/image1.jpeg);
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    min-height: 700px;
+    z-index: 1;
+}
+
+#backgroundImage {
     background-size: cover;
     height: 100%;
     width: 100%;
-    min-height: 400px;
+    opacity: 0;
 }
+
 i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     color: white;
-    padding: 10px 0px 0px 10px;
+    text-shadow: 2px 2px 2px rgb(50 50 50);
     cursor: pointer;
 }
 
@@ -24,11 +35,7 @@ i {
     display: inline-block;
     padding: 0px 10px 0px 10px;
     border-radius: 20px;
-    background-color: black
-}
-
-#title {
-    
+    background-color: rgba(0, 0, 0, .8);
 }
 
 h1 {
@@ -36,6 +43,7 @@ h1 {
     font-size: 7em;
     color: white;
     text-align: center;
+    text-shadow: 3px 3px 3px rgb(50 50 50);
     position: absolute;
     bottom: 200px;
     width: 100%;
@@ -45,22 +53,33 @@ h2 {
     font-family: 'Rock Salt', cursive;
     color: white;
     text-align: center;
+    text-shadow: 2px 2px 2px rgb(50 50 50);
 }
 
 h4 {
-        font-family: 'Rock Salt', cursive;
-font-size: 3em;
+    font-family: 'Rock Salt', cursive;
+    font-size: 3em;
     color: white;
 }
-
+h4:hover {
+    cursor: pointer;
+    color: red;
+    transition: .75s;
+    
+}
 
 #quote {
-    #display: inline-block;
     position: absolute;
     width: 100%;
     bottom: 100px;
-    right: -1100px;
+    right: -2000px;
 }
 
-
-
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+    #quote {
+        bottom: 25px;
+    }
+}
