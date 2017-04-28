@@ -1,33 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt');
-
 .container-fluid {
     position: absolute;
     background-color: black;
     height: 100%;
     width: 100%;
     min-height: 600px;
-    z-index: 1;
 }
 
-#mainBackgroundImage {
+#backgroundImage {
     background-size: cover;
     height: 100%;
     width: 100%;
     opacity: 0;
-}
-
-#subBackgroundImage {
-    background-size: cover;
-    opacity: 0;
-}
-
-i {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    text-shadow: 2px 2px 2px rgb(50 50 50);
-    cursor: pointer;
 }
 
 .menu {
@@ -38,6 +22,14 @@ i {
     padding: 0px 10px 0px 10px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, .8);
+    z-index: 1;
+}
+
+#quote {
+    position: absolute;
+    width: 100%;
+    top: 350px;
+    left: -2000px;
 }
 
 .content {
@@ -53,15 +45,32 @@ i {
     width: 80%;
     max-height: 300px;
     overflow: auto;
+    opacity: 0;
 }
 
-#about,
-#music,
-#shows,
-#photos,
-#connect {
-    opacity: 0;
-    display: none;
+.fa-bars {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+#connect div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#connect i,
+#music i {
+    color: white;
+    padding: 10px 0 10px 0;
+    font-size: 5em;
+}
+
+h5 {
+    padding-top: 30px;
 }
 
 h1 {
@@ -69,7 +78,7 @@ h1 {
     font-size: 6em;
     color: white;
     text-align: center;
-    text-shadow: 3px 3px 3px rgb(50 50 50);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
     position: absolute;
     top: 50px;
     width: 100%;
@@ -80,7 +89,7 @@ h2 {
     font-size: 2.5em;
     color: white;
     text-align: center;
-    text-shadow: 2px 2px 2px rgb(50 50 50);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
 
 h3 {
@@ -94,8 +103,9 @@ h4 {
     color: white;
 }
 
-h4:hover {
-    cursor: pointer;
+h4:hover,
+#connect i:hover,
+#music i:hover {
     color: red;
     transition: .75s;
 }
@@ -106,16 +116,24 @@ h5 {
     color: white;
 }
 
+h6 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
 p {
     color: white;
 }
 
-#quote {
-    position: absolute;
-    width: 100%;
-    top: 350px;
-    left: -2000px;
-}
+a:hover {
+    text-decoration: none;
+    }
 
 @media screen and (min-width: 1200px) and (min-height: 600px) {
     #quote {
@@ -129,15 +147,22 @@ p {
         font-size: 5em;
         top: 250px;
     }
-    @media only screen and (max-width: 768px) {
-        h1 {
-            font-size: 3em;
-        }
-        h2 {
-            font-size: 2em;
-        }
-        @media only screen and (max-width: 576px) {
-            .content {
-                width: 95%;
-            }
-        }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .content {
+        width: 95%;
+    }
+    #connect i {
+        font-size: 3em;
+    }
+}
