@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
     var page = window.location.pathname
-/*
-    console.log(window.location.pathname);
-*/
+    console.log(page);
 
     switch (page) {
         case "/about.html":
@@ -32,8 +30,5 @@ $(document).ready(function () {
     $(".content").animate({
         opacity: "1",
     }, 1000);
-
-
-
 
 });

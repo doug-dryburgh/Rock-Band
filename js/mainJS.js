@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     //QUOTE ANIMATION
     var quotes = ['"The greatest thing to happen to me since my 3rd wife."', '"I\'ve been a groupie since the beginning!"', '"I never thought I\'d find a band I liked more than Nickleback."', '"Move over Bieber, there\'s new superstars in town!"', '"The best Canadian export since poutine."'];
     var i = 0;
@@ -51,7 +51,4 @@ $(document).ready(function () {
 
     backgroundRotation();
     setInterval(backgroundRotation, 8000);
-
-
-
 });
