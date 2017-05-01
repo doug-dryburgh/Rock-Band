@@ -1,54 +1,49 @@
 $(document).ready(function () {
-
     //QUOTE ANIMATION
     var quotes = ['"The greatest thing to happen to me since my 3rd wife."', '"I\'ve been a groupie since the beginning!"', '"I never thought I\'d find a band I liked more than Nickleback."', '"Move over Bieber, there\'s new superstars in town!"', '"The best Canadian export since poutine."'];
+    
     var i = 0;
-
     function quoteRotation() {
         $("#quote > h2").html(quotes[i]);
         $("#quote").animate({
-            left: "0px",
-        }, 1000);
+            left: "0px"
+        , }, 1000);
         setTimeout(function () {
             $("#quote").animate({
-                left: "-2000px",
-            }, 1000);
+                left: "-2000px"
+            , }, 1000);
         }, 6000);
         if (i === quotes.length - 1) {
             i = 0;
-        } else {
+        }
+        else {
             i++;
         }
     }
     setTimeout(function () {
         quoteRotation();
         setInterval(quoteRotation, 8000);
-
     }, 500);
-
-
+    
     //BACKGROUND ANIMATION
-    var backgrounds = ["url(./images/image1.jpeg)", "url(./images/image2.jpeg)", "url(./images/image3.jpeg)", "url(./images/image4.jpeg)", "url(./images/image5.jpeg)"];
-    var j = 0;
-
+    var j = 1;
     function backgroundRotation() {
-        $("#backgroundImage").css("background-image", backgrounds[j]);
-        $("#backgroundImage").animate({
-            opacity: "1",
-        }, 1000);
-
+        $(".backgroundImages li:nth-child(" + j + ")").animate({
+            opacity: "1"
+        , }, 1000);
         setTimeout(function () {
-            $("#backgroundImage").animate({
-                opacity: "0",
-            }, 1000);
+            $(".backgroundImages li:nth-child(" + j + ")").animate({
+                opacity: "0"
+            , }, 1000);
+            if (j === 5) {
+                j = 1;
+            }
+            else {
+                j++;
+            }
         }, 7000);
-        if (j === backgrounds.length - 1) {
-            j = 0;
-        } else {
-            j++;
-        }
     }
-
     backgroundRotation();
     setInterval(backgroundRotation, 8000);
+
 });

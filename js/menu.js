@@ -22,7 +22,7 @@ $(document).ready(function() {
         var newPage = this.href;
 
         //fade current page
-        $("#backgroundImage, h1, #quote, .content, .menu").animate({
+        $(".backgroundImages, h1, #quote, .content, .menu").animate({
             opacity: "0",
         }, 500);
 

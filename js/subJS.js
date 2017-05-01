@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     var page = window.location.pathname
-    console.log(page);
 
     switch (page) {
         case "/about.html":
@@ -21,8 +20,7 @@ $(document).ready(function () {
     }
 
     function loadBackground(value) {
-        $("#backgroundImage").css("background-image", "url(./images/image" + value + ".jpeg)");
-        $("#backgroundImage").animate({
+        $(".backgroundImages li:nth-child(" + value + ")").animate({
             opacity: "1",
         }, 1000);
     }
